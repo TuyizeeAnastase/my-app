@@ -1,5 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+function getBtnText(){
+ 
+    return 'Click Me';
+
+};
+
+const App=()=>{
+
+
+    return <div>
+    <label className="label" for="name">Enter a name:</label>
+    <input id="name" type="text"/>
+    <button style={{backgroundColor:'blue',color:'white'}}>{getBtnText()}</button>
+  </div>
+}
+
+ReactDom.render(<App/>,document.querySelector('#root'));
